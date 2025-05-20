@@ -180,9 +180,9 @@ if( ini_get('safe_mode') ){
 echo '<div class="lillist">'.$passed.' Safe Mode is off. (Required : Off)</div>';
 }
 
-$result = getDataFromUrl("http://labs.phpvibe.com/demo.php");
+$result = getDataFromUrl("https://dummyjson.com/products");
 $result = json_decode($result, true);
-if($result['valid'] == "true"){
+if($result['products']){
  echo '<div class="lillist">'.$passed.' cUrl test passed.</div>';
 } else {
 echo '<div class="lillist">'.$aerror.' cUrl test failed.</div>';
